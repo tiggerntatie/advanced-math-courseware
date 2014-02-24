@@ -1,3 +1,5 @@
+*.*~
+
 *.py[cod]
 
 # C extensions
@@ -16,6 +18,7 @@ sdist
 develop-eggs
 .installed.cfg
 lib
+local
 lib64
 __pycache__
 
@@ -34,3 +37,6 @@ nosetests.xml
 .mr.developer.cfg
 .project
 .pydevproject
+/include/
+/_build/
+/*~
