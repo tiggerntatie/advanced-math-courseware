@@ -208,7 +208,7 @@ latex_elements = {
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
-  ('index', 'AdvancedMathCourseware.tex', u'Advanced Math Courseware Documentation',
+  ('index', 'AdvancedMathCourseware.tex', u'Advanced Math Courseware',
    u'Eric Dennison', 'manual'),
 ]
 
