@@ -74,7 +74,7 @@ may discuss it with anyone in the class.
     
     Equation :math:`b(x)=?` (4) Table (5) Graph (4)
 
-    **C. Vertical Shift:**
+    **C. Horizontal Shift:**
     
     Equation :math:`h(x)=?` (4) Table (5) Graph (4)
 
@@ -84,7 +84,7 @@ may discuss it with anyone in the class.
 
     **E. Inverse:**
 
-    :math:`f^{-1}(x)` or :math:`MATH(f(x))`  (4) Table (5) Graph (4)
+    :math:`f^{-1}(x)` or :math:`INV(f(x))`  (4) Table (5) Graph (4)
 
     **F. Combination of Transformations (at least two):**
     
