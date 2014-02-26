@@ -35,8 +35,7 @@ may discuss it with anyone in the class.
       (3) Reflections
       
 4. Create a new table of values for each transformation, applying the 
-   transformation, applying the transformation to the coordinates. 
-   Label each table as A, B, C, D, E, F.
+   transformation to the coordinates. Label each table as A, B, C, D, E, F.
    For column headings, write each transformation in terms of the "parent 
    function" *f(x)*
    
