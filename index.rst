@@ -12,15 +12,20 @@ Contents:
 .. toctree::
    :maxdepth: 2
 
-   functions-periodic
-   functions-parent
-   functions-project
-   functions-quadratic
+   units/functions-periodic/index
+   units/functions-parent/index
+   units/project-transformations/index
+   units/functions-quadratic/index
 
-
+.. toctree::
+   :maxdepth: 1
+   
+   examples
+      
 .. raw:: pdf
 
     PageBreak
+
      
 Indices and tables
 ------------------

@@ -28,7 +28,18 @@ target = sys.argv[sys.argv.index('-b')+1]
 
 # Add any Sphinx extension module names here, as strings. They can be extensions
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
-extensions = ['sphinx.ext.ifconfig']
+extensions = [
+    'sphinx.ext.ifconfig',
+#          'matplotlib.sphinxext.mathmpl',
+#          'matplotlib.sphinxext.only_directives',
+#          'matplotlib.sphinxext.plot_directive',
+#          'matplotlib.sphinxext.ipython_directive',
+#          'sphinx.ext.autodoc',
+#          'sphinx.ext.doctest',
+#          'ipython_console_highlighting',
+#          'inheritance_diagram',
+#          'numpydoc'    
+    ]
 
 if target == 'html':
     extensions.extend(['sphinx.ext.mathjax'])
@@ -76,7 +87,12 @@ release = '1.0'
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
-exclude_patterns = ['_build']
+exclude_patterns = ['_build', 
+    'units/*/examples.rst', 
+    'units/*/practice.rst', 
+    'units/*/examples/*[pq].rst', 
+    'units/*/practice/*[pq].rst',
+    ]
 
 # The reST default role (used for this markup: `text`) to use for all documents.
 #default_role = None
@@ -100,6 +116,10 @@ pygments_style = 'sphinx'
 
 # If true, keep warnings as "system message" paragraphs in the built documents.
 #keep_warnings = False
+
+# -- Options for pngmath output (used with ePub)
+
+pngmath_dvipng_args = ['-gamma', '1.5', '-D', '110', '-bg', 'Transparent']
 
 # -- Options for HTML output ---------------------------------------------------
 
@@ -221,10 +241,10 @@ latex_documents = [
 #latex_use_parts = False
 
 # If true, show page references after internal links.
-#latex_show_pagerefs = False
+latex_show_pagerefs = True
 
 # If true, show URL addresses after external links.
-#latex_show_urls = False
+latex_show_urls = True
 
 # Documents to append as an appendix to all manuals.
 #latex_appendices = []
@@ -274,8 +294,8 @@ texinfo_documents = [
 
 # Bibliographic Dublin Core info.
 epub_title = u'Advanced Math Courseware'
-epub_author = u'Eric Dennison'
-epub_publisher = u'Eric Dennison'
+epub_author = u'HHS Mathematics'
+epub_publisher = u'HHS Mathematics'
 epub_copyright = u'2014, Eric Dennison'
 
 # The basename for the epub file. It defaults to the project name.
@@ -316,7 +336,11 @@ epub_copyright = u'2014, Eric Dennison'
 #epub_post_files = []
 
 # A list of files that should not be packed into the epub file.
-epub_exclude_files = ['search.html']
+epub_exclude_files = [
+    'search.html',
+    '*.py',
+    '*.pdf',
+    ]
 
 # The depth of the table of contents in toc.ncx.
 #epub_tocdepth = 3
@@ -337,3 +361,5 @@ pdf_break_level = 2
 
 # If false, no index is generated.
 #epub_use_index = True
+
+

@@ -19,6 +19,11 @@ ALLSPHINXOPTS   = -d $(BUILDDIR)/doctrees $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) .
 # the i18n builder cannot share the environment and doctrees with the others
 I18NSPHINXOPTS  = $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) .
 
+# Custom definitions
+EXAMPLES = $(wildcard units/*/examples.rst)
+PRACTICE = $(wildcard units/*/practice.rst)
+TOOLS = tools
+
 .PHONY: help clean html dirhtml singlehtml pickle json htmlhelp qthelp devhelp epub latex latexpdf text man changes linkcheck doctest gettext
 
 help:
@@ -48,8 +53,21 @@ help:
 
 clean:
 	rm -rf $(BUILDDIR)/*
+	rm -rf units/*/examples
+	rm -rf units/*/practice
+
+
+examples: $(EXAMPLES)
+	rm -rf units/*/examples
+	python $(TOOLS)/makeanswers.py $(EXAMPLES)
+
+practice: $(PRACTICE)
+	rm -rf units/*/practice
+	python $(TOOLS)/makeanswers.py $(PRACTICE)
 
 html:
+	make examples
+	make practice
 	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html
 	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html."
@@ -99,11 +117,15 @@ devhelp:
 	@echo "# devhelp"
 
 epub:
+	make examples
+	make practice
 	$(SPHINXBUILD) -b epub $(ALLSPHINXOPTS) $(BUILDDIR)/epub
 	@echo
 	@echo "Build finished. The epub file is in $(BUILDDIR)/epub."
 
 latex:
+	make examples
+	make practice
 	$(SPHINXBUILD) -b latex $(ALLSPHINXOPTS) $(BUILDDIR)/latex
 	@echo
 	@echo "Build finished; the LaTeX files are in $(BUILDDIR)/latex."
@@ -111,12 +133,16 @@ latex:
 	      "(use \`make latexpdf' here to do that automatically)."
 
 latexpdf:
+	make examples
+	make practice
 	$(SPHINXBUILD) -b latex $(ALLSPHINXOPTS) $(BUILDDIR)/latex
 	@echo "Running LaTeX files through pdflatex..."
 	$(MAKE) -C $(BUILDDIR)/latex all-pdf
 	@echo "pdflatex finished; the PDF files are in $(BUILDDIR)/latex."
 
 pdf:
+	make examples
+	make practice
 	$(SPHINXBUILD) -b pdf $(ALLSPHINXOPTS) $(BUILDDIR)/pdf
 	@echo
 	@echo "Build finished. The pdfs are in $(BUILDDIR)/pdf."
