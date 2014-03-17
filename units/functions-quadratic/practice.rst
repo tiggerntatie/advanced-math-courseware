@@ -222,10 +222,12 @@ Quadratic Functions Practice C.1
 ~~~~~~~~
 Question
 ~~~~~~~~
+Find the zeros of: :math:`f(x)=x^2-4x+5`
 
 ~~~~~~
 Answer
 ~~~~~~
+:math:`x=2\pm i`
 
 ~~~~~~~~
 Solution
@@ -238,11 +240,12 @@ Quadratic Functions Practice C.2
 ~~~~~~~~
 Question
 ~~~~~~~~
+Solve for x: :math:`x^2+2x+2=0`
 
 ~~~~~~
 Answer
 ~~~~~~
-
+:math:`x=-1 \pm i`
 ~~~~~~~~
 Solution
 ~~~~~~~~
@@ -254,10 +257,21 @@ Quadratic Functions Practice C.3
 ~~~~~~~~
 Question
 ~~~~~~~~
+Given :math:`r=3+4i` and :math:`s=2-2i`,  find:
+
+a) :math:`r+s`
+b) :math:`r-s`
+c) :math:`r \cdot s`
+d) :math:`\frac r s`
 
 ~~~~~~
 Answer
 ~~~~~~
+a) :math:`5+2i`
+b) :math:`1+6i`
+c) :math:`14+2i`
+d) :math:`\frac{-1+7i}{4}`
+
 
 ~~~~~~~~
 Solution
@@ -270,10 +284,48 @@ Quadratic Functions Practice C.4
 ~~~~~~~~
 Question
 ~~~~~~~~
+If: :math:`i^2=-1`, then :math:`i^3 = i^2\cdot i = -1 \cdot i = -i`, and 
+:math:`i^4 = i^3 \cdot i = -i \cdot i = -(-1)=1`, and so on...
 
+a) Use this process to complete the following table:    
+
+.. list-table:: 
+   :widths: 10 2 2 2 2 2 2 2 2 2 2
+   :header-rows: 1
+
+   * - n
+     - 0
+     - 1
+     - 2
+     - 3
+     - 4
+     - 5
+     - 6
+     - 7
+     - 8
+     - 9
+   * - :math:`f(n)=i^n`
+     - 1
+     - i
+     - -1
+     -
+     -
+     -
+     -
+     -
+     -
+     -
+     
+   
+b) Describe :math:`f(n)=i^n`. What kind of function is it?
+c) What is the period of :math:`f(n)`?
+    
 ~~~~~~
 Answer
 ~~~~~~
+a) -i, 1, i, -1, -i, 1, i
+b) It is a periodic function.
+c) 4
 
 ~~~~~~~~
 Solution
@@ -286,10 +338,20 @@ Quadratic Functions Practice C.5
 ~~~~~~~~
 Question
 ~~~~~~~~
+Use the answer to the previous question to find: 
+
+a) :math:`i^{12}`
+b) :math:`i^{400}`
+c) :math:`i^{401}`
+d) :math:`i^{1776}`
 
 ~~~~~~
 Answer
 ~~~~~~
+a) 1
+b) 1
+c) i
+d) 1
 
 ~~~~~~~~
 Solution
