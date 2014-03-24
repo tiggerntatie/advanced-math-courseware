@@ -17,10 +17,6 @@ Contents:
    units/project-transformations/index
    units/functions-quadratic/index
 
-.. toctree::
-   :maxdepth: 1
-   
-   examples
       
 .. raw:: pdf
 
