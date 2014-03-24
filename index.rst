@@ -14,8 +14,9 @@ Contents:
 
    units/functions-periodic/index
    units/functions-parent/index
-   units/project-transformations/index
+   projects/transformations/index
    units/functions-quadratic/index
+   projects/shotornot/index
 
       
 .. raw:: pdf
