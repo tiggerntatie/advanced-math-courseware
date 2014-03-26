@@ -12,6 +12,9 @@
 # serve to show the default.
 
 import sys, os
+# import Cloud
+import cloud_sptheme as csp
+
 
 #
 target = sys.argv[sys.argv.index('-b')+1]
@@ -125,7 +128,7 @@ pngmath_dvipng_args = ['-gamma', '1.5', '-D', '110', '-bg', 'Transparent']
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-html_theme = 'default'
+html_theme = 'cloud'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
@@ -138,8 +141,15 @@ if html_theme == 'default':
         "rightsidebar" : True,
         }
 
+if html_theme == 'cloud':
+    html_theme_options = {
+        "bodyfont" : 'Cambria, Georgia, Times, "Times New Roman", serif',
+        "headfont" : 'Cambria, Georgia, Times, "Times New Roman", serif',
+        "rightsidebar" : True,
+        "max_width" : "100%",
+        }
 # Add any paths that contain custom themes here, relative to this directory.
-#html_theme_path = []
+html_theme_path = [csp.get_theme_dir()]
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
@@ -160,7 +170,10 @@ html_title = "HHS Advanced Mathematics Textbook Project"
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = ['_static']
+if target == 'html':
+    html_static_path = ['_html_static']
+else:
+    html_static_path = ['_static']
 
 # Add any extra paths that contain custom files (such as robots.txt or
 # .htaccess) here, relative to this directory. These files are copied

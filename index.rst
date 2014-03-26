@@ -17,6 +17,7 @@ Contents:
    projects/transformations/index
    units/functions-quadratic/index
    projects/shotornot/index
+   projects/linearprogramming/index
 
       
 .. raw:: pdf
