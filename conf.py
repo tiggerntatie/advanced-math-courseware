@@ -67,7 +67,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'Advanced Math Courseware'
-copyright = u'2014, Eric Dennison'
+copyright = u'2014, HHS Mathematics Department'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -172,6 +172,8 @@ html_title = "HHS Advanced Mathematics Textbook Project"
 # so a file named "default.css" will overwrite the builtin "default.css".
 if target == 'html':
     html_static_path = ['_html_static']
+elif target == 'epub':
+    html_static_path = ['_epub_static']
 else:
     html_static_path = ['_static']
 
@@ -242,7 +244,7 @@ latex_elements = {
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
   ('index', 'AdvancedMathCourseware.tex', u'Advanced Math Courseware',
-   u'Eric Dennison', 'manual'),
+   u'HHS Mathematics Department', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -272,7 +274,7 @@ latex_show_urls = True
 # (source start file, name, description, authors, manual section).
 man_pages = [
     ('index', 'advancedmathcourseware', u'Advanced Math Courseware Documentation',
-     [u'Eric Dennison'], 1)
+     [u'HHS Mathematics Department'], 1)
 ]
 
 # If true, show URL addresses after external links.
@@ -286,7 +288,7 @@ man_pages = [
 #  dir menu entry, description, category)
 texinfo_documents = [
   ('index', 'AdvancedMathCourseware', u'Advanced Math Courseware Documentation',
-   u'Eric Dennison', 'AdvancedMathCourseware', 'One line description of project.',
+   u'HHS Mathematics Department', 'AdvancedMathCourseware', 'One line description of project.',
    'Miscellaneous'),
 ]
 
@@ -309,7 +311,7 @@ texinfo_documents = [
 epub_title = u'Advanced Math Courseware'
 epub_author = u'HHS Mathematics'
 epub_publisher = u'HHS Mathematics'
-epub_copyright = u'2014, Eric Dennison'
+epub_copyright = u'2014, HHS Mathematics Department'
 
 # The basename for the epub file. It defaults to the project name.
 #epub_basename = u'Advanced Math Courseware'
@@ -365,7 +367,7 @@ epub_exclude_files = [
 #epub_tocscope = 'default'
 
 # -- Options for pdf output -------------------------------------------
-pdf_documents = [('index', u'Advanced Math', u'Advanced Math doc', u'Eric Dennison'),]
+pdf_documents = [('index', u'Advanced Math', u'Advanced Math doc', u'HHS Mathematics Department'),]
 
 pdf_break_level = 2
 
