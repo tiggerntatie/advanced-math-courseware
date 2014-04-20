@@ -14,7 +14,7 @@ pdfrw==0.1
 pyparsing==2.0.1
 python-dateutil==2.2
 reportlab==3.0
-rst2pdf==0.93.dev
+rst2pdf==0.93
 six==1.5.2
 tornado==3.2
 wsgiref==0.1.2
