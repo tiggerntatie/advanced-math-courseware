@@ -22,6 +22,7 @@ I18NSPHINXOPTS  = $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) .
 # Custom definitions
 EXAMPLES = $(wildcard units/*/examples.rst)
 PRACTICE = $(wildcard units/*/practice.rst)
+PPRACTICE = $(wildcard projects/*/practice.rst)
 TOOLS = tools
 
 .PHONY: help clean html dirhtml singlehtml pickle json htmlhelp qthelp devhelp epub latex latexpdf text man changes linkcheck doctest gettext
@@ -55,6 +56,7 @@ clean:
 	rm -rf $(BUILDDIR)/*
 	rm -rf units/*/examples
 	rm -rf units/*/practice
+	rm -rf projects/*/practice
 
 
 examples: $(EXAMPLES)
@@ -65,9 +67,14 @@ practice: $(PRACTICE)
 	rm -rf units/*/practice
 	python $(TOOLS)/makeanswers.py $(PRACTICE)
 
+ppractice: $(PPRACTICE)
+	rm -rf projects/*/practice
+	python $(TOOLS)/makeanswers.py $(PPRACTICE)
+	
 html:
 	make examples
 	make practice
+	make ppractice
 	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html
 	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html."
@@ -119,6 +126,7 @@ devhelp:
 epub:
 	make examples
 	make practice
+	make ppractice
 	$(SPHINXBUILD) -b epub $(ALLSPHINXOPTS) $(BUILDDIR)/epub
 	@echo
 	@echo "Build finished. The epub file is in $(BUILDDIR)/epub."
@@ -126,6 +134,7 @@ epub:
 latex:
 	make examples
 	make practice
+	make ppractice
 	$(SPHINXBUILD) -b latex $(ALLSPHINXOPTS) $(BUILDDIR)/latex
 	@echo
 	@echo "Build finished; the LaTeX files are in $(BUILDDIR)/latex."

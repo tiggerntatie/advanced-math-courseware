@@ -41,7 +41,7 @@ extensions = [
 #          'sphinx.ext.doctest',
 #          'ipython_console_highlighting',
 #          'inheritance_diagram',
-#          'numpydoc'    
+#          'numpydoc'
     ]
 
 if target == 'html':
@@ -90,11 +90,13 @@ release = '1.0'
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
-exclude_patterns = ['_build', 
-    'units/*/examples.rst', 
-    'units/*/practice.rst', 
-    'units/*/examples/*[pq].rst', 
+exclude_patterns = ['_build',
+    'units/*/examples.rst',
+    'units/*/practice.rst',
+    'projects/*/practice.rst',
+    'units/*/examples/*[pq].rst',
     'units/*/practice/*[pq].rst',
+    'projects/*/practice/*[pq].rst',
     ]
 
 # The reST default role (used for this markup: `text`) to use for all documents.

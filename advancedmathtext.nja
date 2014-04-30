@@ -1,0 +1,30 @@
+{
+  "mainFile": "make.py", 
+  "use-tabs": false, 
+  "venv": "/home/ericdennison/.virtualenvs/amath-docs/bin/python", 
+  "relatedProjects": [], 
+  "name": "advancedmathtext", 
+  "license": "GNU General Public License v3", 
+  "url": "_build/html/index.html", 
+  "pythonPath": "/home/ericdennison/.virtualenvs/amath-docs/bin/python", 
+  "preExecScript": "", 
+  "additional_builtins": [], 
+  "programParams": "", 
+  "indentation": 4, 
+  "PYTHONPATH": "", 
+  "supported-extensions": [
+    ".py", 
+    ".html", 
+    ".jpg", 
+    ".png", 
+    ".ui", 
+    ".css", 
+    ".json", 
+    ".js", 
+    ".ini", 
+    ".rst"
+  ], 
+  "project-type": "Import from sources", 
+  "postExecScript": "", 
+  "description": ""
+}

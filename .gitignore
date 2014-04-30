@@ -1,6 +1,7 @@
 *.*~
 units/*/examples
 units/*/practice
+projects/*/practice
 
 *.py[cod]
 
